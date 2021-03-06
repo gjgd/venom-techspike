@@ -6,10 +6,9 @@
   "dependencies": {
     "venom-bot": "^3.0.8"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "gjgd",
-  "license": "ISC"
+  "license": "MIT"
 }

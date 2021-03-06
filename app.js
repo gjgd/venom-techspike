@@ -1,26 +1,26 @@
-// Supports ES6
-// import { create, Whatsapp } from 'venom-bot';
 const venom = require('venom-bot');
 
 venom
   .create()
   .then((client) => start(client))
-  .catch((erro) => {
-    console.log(erro);
+  .catch((error) => {
+    console.error(error);
   });
 
 function start(client) {
-  client.onMessage((message) => {
-    console.log({ message });
-    if (message.body === 'Hi' && message.isGroupMsg === false) {
-      client
-        .sendText(message.from, 'Welcome Venom 🕷')
-        .then((result) => {
-          console.log('Result: ', result); //return object success
-        })
-        .catch((erro) => {
-          console.error('Error when sending: ', erro); //return object error
-        });
+  client.onMessage(async (message) => {
+    console.log(`received ${message.body}`);
+    try {
+      if (message.body === '!time') {
+        const result = await client.sendText(message.from, `${Date.now()}`);
+        console.log(result.status);
+      }
+      if (message.body === 'Hi' && message.isGroupMsg === false) {
+        const result = await client.sendText(message.from, 'Welcome Venom 🕷');
+        console.log(result.status);
+      }
+    } catch (error) {
+      console.log(error);
     }
   });
 }
