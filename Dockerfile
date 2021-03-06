@@ -1,7 +1,5 @@
 FROM buildkite/puppeteer as build
 WORKDIR /app
-# I think this is not necessary
-# RUN apt-get install -y build-essential python3
 COPY package.json .
 RUN npm install
 
