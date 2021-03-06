@@ -7,7 +7,9 @@
     "venom-bot": "^3.0.8"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "docker:build": "docker build -t venom .",
+    "docker:run": "docker run -it -v \"$(pwd)\"/tokens:/app/tokens venom"
   },
   "author": "gjgd",
   "license": "MIT"
