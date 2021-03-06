@@ -22,7 +22,10 @@ function start(client) {
         console.log(result.status);
       }
       if (message.body === 'Hi' && message.isGroupMsg === false) {
-        const result = await client.sendText(message.from, 'Welcome Venom 🕷');
+        const result = await client.sendText(
+          message.from,
+          `Hi ${message.sender.shortName}`,
+        );
         console.log(result.status);
       }
     } catch (error) {
