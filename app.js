@@ -21,7 +21,7 @@ function start(client) {
         const result = await client.sendText(message.from, `${Date.now()}`);
         console.log(result.status);
       }
-      if (message.body === 'Hi' && message.isGroupMsg === false) {
+      if (message.body === 'Hi') {
         const result = await client.sendText(
           message.from,
           `Hi ${message.sender.shortName}`,
