@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "docker:build": "docker build -t venom .",
+    "predocker:run": "docker build -t venom .",
     "docker:run": "docker run -it -v \"$(pwd)\"/tokens:/app/tokens venom"
   },
   "author": "gjgd",
