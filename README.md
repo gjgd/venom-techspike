@@ -1,6 +1,6 @@
-# venom-techspike
+# Venom techspike
 
-Trying out https://github.com/orkestral/venom for a Whatsapp bot
+Trying out the [Venom framework](https://github.com/orkestral/venom) to build a Whatsapp bot
 
 # How to use
 
