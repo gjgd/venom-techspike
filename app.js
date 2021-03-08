@@ -1,17 +1,17 @@
 const venom = require('venom-bot');
 
 venom
-	.create(
-		'session',
-		() => {},
-		() => {},
-		{
-			browserArgs: ['--no-sandbox'],
-		}
-	).then((client) => start(client))
-	.catch((error) => {
-		console.error(error);
-	});
+  .create(
+    'session',
+    () => {},
+    () => {},
+    {
+      browserArgs: ['--no-sandbox'],
+    }
+  ).then((client) => start(client))
+  .catch((error) => {
+    console.error(error);
+  });
 
 function start(client) {
   client.onMessage(async (message) => {
